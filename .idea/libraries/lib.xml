@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/project-3-f29e570b1fa6f97b7944948f7a4755ee2d6608da/lib/junit-jupiter-engine-5.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/project-3-f29e570b1fa6f97b7944948f7a4755ee2d6608da/lib/junit-platform-commons-1.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/project-3-f29e570b1fa6f97b7944948f7a4755ee2d6608da/lib/opentest4j-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/project-3-f29e570b1fa6f97b7944948f7a4755ee2d6608da/lib/apiguardian-api-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/project-3-f29e570b1fa6f97b7944948f7a4755ee2d6608da/lib/junit-jupiter-params-5.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/project-3-f29e570b1fa6f97b7944948f7a4755ee2d6608da/lib/junit-platform-engine-1.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/project-3-f29e570b1fa6f97b7944948f7a4755ee2d6608da/lib/junit-jupiter-5.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/project-3-f29e570b1fa6f97b7944948f7a4755ee2d6608da/lib/junit-jupiter-api-5.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
