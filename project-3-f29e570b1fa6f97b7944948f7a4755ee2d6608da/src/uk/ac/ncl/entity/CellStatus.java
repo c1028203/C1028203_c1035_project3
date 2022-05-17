@@ -12,5 +12,5 @@ public enum CellStatus {
     EMPTY,
     LIGHT,
     DARK,
-    GRAY
+    GRAY,
 }
