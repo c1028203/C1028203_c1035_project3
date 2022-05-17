@@ -77,7 +77,7 @@ public class Cell {
                 this.jButton.setBackground(Color.white);
                 break;
             case EMPTY:
-                this.jButton.setBackground(Color.GREEN);
+                this.jButton.setBackground(new Color(820000));
                 break;
             case GRAY:
                 this.jButton.setBackground(Color.GRAY);
