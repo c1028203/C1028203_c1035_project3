@@ -4,6 +4,9 @@
  * @since 05-03-2020
  */
 package uk.ac.ncl.entity;
+/**
+ * The below block of code is used to import necessary packages to allow the code to run
+ */
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -13,12 +16,12 @@ import java.util.ArrayList;
 import static uk.ac.ncl.Constants.BOARD_SIZE;
 
 /**
- * Represents each cell of the playing board.
+ * This class represents each cell on the board and is used to store information about them
  */
 public class Cell {
 
     /**
-     * Current cell status.
+     * This represents the current status of a cell whether that be light, dark or empty.
      */
     private CellStatus value;
     /**
@@ -26,16 +29,16 @@ public class Cell {
      */
     private JButton jButton;
     /**
-     * Cell's row
+     * This value represent the row in which a cell resides.
      */
     private int row;
     /**
-     *  Cell's column
+     *  This value represents the column in which a cell resides.
      */
     private int column;
 
     /**
-     *  Potential moves of the piece
+     *  This values shows the potential moves of a piece
      */
     private Move move;
 
@@ -66,7 +69,10 @@ public class Cell {
     }
 
     /**
-     *   Updates the status of the cell
+     *   This piece of code is used for the purpose of updating the status of a cell changing it to black if it is a dark cell,
+     *   To white if it is a light cell,
+     *   To the colour of the green background if it is empty
+     *   Or to grey if a cell can be used for a potential move
      */
     public void setValue(CellStatus value) {
         switch (value){
@@ -142,7 +148,7 @@ public class Cell {
     }
 
     /**
-     * Checks whether the cell is on board.
+     * This section of code is used to determine whether a cell is within the boundaries of the board by comparing the coordinates of the cell to the dimensions of the board.
      *
      * @return true if the cell index is inside board boundaries
      */
