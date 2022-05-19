@@ -113,27 +113,30 @@ public class Cell {
         int[][] DIRS = {{-1,-1}, {-1,0}, {-1,1}, {0,1}, {0,-1}, {1,1}, {1,0}, {1,-1}};
 
         for (int[] dir : DIRS){
+            Cell cell = null;
             int temp_score = 0;
-            Cell cell = IsOnBoard(this.getRow() + dir[1], this.getColumn() + dir[1]) ? cells[this.getRow() + dir[1]][this.getColumn() + dir[1]] : null;
-            if (cell != null
-                    && cell.getValue() != CellStatus.EMPTY
-                    && cell.getValue() == opponent) {
-                while (true){
-                    cell = IsOnBoard(cell.row + dir[0],cell.column + dir[1]) ? cells[cell.row + dir[0]][cell.column + dir[1]] :  null;
-                    temp_score += 1;
-                    if (!(cell != null
-                            && cell.getValue() != CellStatus.EMPTY)){
-                        if (cell.getValue() == colour) {
+            try{
+                cell = IsOnBoard(this.getRow() + dir[0], this.getColumn() + dir[1]) ? cells[this.getRow() + dir[0]][this.getColumn() + dir[1]] : null;
+            }
+            catch(ArrayIndexOutOfBoundsException e){
+            }
+            if(cell != null)
+                if (cell != null
+                        && cell.getValue() != CellStatus.EMPTY
+                        && cell.getValue() == opponent) {
+                    while (true) {
+                        cell = IsOnBoard(cell.row + dir[0], cell.column + dir[1]) ? cells[cell.row + dir[0]][cell.column + dir[1]] : null;
+                        temp_score += 1;
+                        if ((cell != null && cell.getValue() == colour)) {
                             score += temp_score;
                             moves.add(new DirectedMove(cell, dir));
+                        } else {
+                            break;
                         }
-                    } else {
-                        break;
                     }
                 }
-            }
-        }
 
+        }
         Move move = new Move(moves, score);
         this.setMove(move);
         return !moves.isEmpty();
