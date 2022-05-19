@@ -137,6 +137,9 @@ public class Cell {
                 }
 
         }
+        /**
+         * This piece of code is responsible for returning valid moves
+         */
         Move move = new Move(moves, score);
         this.setMove(move);
         return !moves.isEmpty();

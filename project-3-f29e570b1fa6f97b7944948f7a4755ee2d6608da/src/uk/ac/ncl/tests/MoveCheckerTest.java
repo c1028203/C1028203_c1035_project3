@@ -31,7 +31,7 @@ class MoveCheckerTest {
                 } else if ((i == 4 && j == 4) || (i == 3 && j == 3)) {
                     tempEl.setValue(CellStatus.DARK);
                 }
-                cells[i][i] = tempEl;
+                cells[i][j] = tempEl;
             }
         }
     }
