@@ -87,7 +87,7 @@ class MoveCheckerTest {
         assertTrue(cells[2][4].getValue() == testColour);
         assertTrue(cells[3][5].getValue() == testColour);
         assertTrue(cells[4][2].getValue() == testColour);
-        assertTrue(cells[5][3].getValue() == testColour);
+        assertTrue(cells[5][3].getValue()==testColour);
     }
 
     @Test
