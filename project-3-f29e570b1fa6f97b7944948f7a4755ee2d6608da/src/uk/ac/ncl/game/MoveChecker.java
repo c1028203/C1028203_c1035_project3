@@ -4,12 +4,14 @@
  * @since 05-03-2020
  */
 package uk.ac.ncl.game;
+/**
+ * The below section of code is used for the purpose of importing necessary libraries for the code
+ */
 
 import uk.ac.ncl.entity.CellStatus;
 import uk.ac.ncl.entity.DirectedMove;
 import uk.ac.ncl.entity.Cell;
 import java.util.ArrayList;
-
 import static uk.ac.ncl.Constants.*;
 
 /**
@@ -33,7 +35,7 @@ public class MoveChecker {
      */
     public Cell generateOpponent(CellStatus cellStatus) {
         ArrayList<Cell> potentialMoves = findPotentialMoves(cellStatus);
-        Cell opponentsMove = null;
+        Cell opponentsMove = cells[0][0];
         for (Cell cell : potentialMoves){
                 opponentsMove = opponentsMove == null
                         && cell.getMove().getScore() > opponentsMove.getMove().getScore()

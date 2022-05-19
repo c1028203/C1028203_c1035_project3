@@ -119,7 +119,7 @@ public class Cell {
                 cell = IsOnBoard(this.getRow() + dir[0], this.getColumn() + dir[1]) ? cells[this.getRow() + dir[0]][this.getColumn() + dir[1]] : null;
             }
             catch(ArrayIndexOutOfBoundsException e){
-                System.out.println("Out of Bounds Error");
+                System.out.println("Out-of-Bounds error");
             }
             if(cell != null)
                 if (cell != null
