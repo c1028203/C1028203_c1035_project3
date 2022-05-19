@@ -75,11 +75,22 @@ public class Cell {
      *   Or to grey if a cell can be used for a potential move
      */
     public void setValue(CellStatus value) {
-        switch (value) {
-            case DARK -> this.jButton.setBackground(Color.BLACK);
-            case LIGHT -> this.jButton.setBackground(Color.white);
-            case EMPTY -> this.jButton.setBackground(new Color(820000));
-            case GRAY -> this.jButton.setBackground(Color.GRAY);
+        this.value = value;
+        switch (value){
+            case EMPTY:
+                this.jButton.setBackground(new Color(820000));
+                break;
+            case LIGHT:
+                this.jButton.setBackground(Color.WHITE);
+                break;
+            case DARK:
+                this.jButton.setBackground(Color.BLACK);
+                break;
+            case GRAY:
+                this.jButton.setBackground(Color.GRAY);
+                break;
+            default:
+                break;
         }
     }
 
