@@ -38,7 +38,7 @@ public class MoveChecker {
         Cell opponentsMove = cells[0][0];
         for (Cell cell : potentialMoves){
                 opponentsMove = opponentsMove == null
-                        && cell.getMove().getScore() > opponentsMove.getMove().getScore()
+                        || cell.getMove().getScore() > opponentsMove.getMove().getScore()
                         ? cell
                         : opponentsMove;
         }
